@@ -1,3 +1,5 @@
 class Question < ActiveRecord::Base
-  attr_accessible :hint, :title
+  attr_accessible :category_id, :hint, :title
+
+  belongs_to :category
 end

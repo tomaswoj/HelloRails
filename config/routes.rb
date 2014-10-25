@@ -2,6 +2,9 @@ HelloRails::Application.routes.draw do
   resources :questions
 
 
+  resources :categories
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

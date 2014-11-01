@@ -1,0 +1,10 @@
+<% provide(:title, 'Home') %>
+<html>
+<head></head>
+<title><%= yield(:title) %></title>
+<body>
+<h1>My Static Page</h1>
+<%= full_title(yield(:title)) %>
+<p>Find me in app/views/static_pages/about.html.erb</p>
+</body>
+</html>

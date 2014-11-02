@@ -3,8 +3,11 @@
 <head></head>
 <title><%= yield(:title) %></title>
 <body>
+<%= render 'layouts/header' %>
 <h1>My Static Page</h1>
 <%= full_title(yield(:title)) %>
+<%= doubler(yield(:title)) %>
 <p>Find me in app/views/static_pages/about.html.erb</p>
+<%= link_to "Contact Us", contact_path %>
 </body>
 </html>

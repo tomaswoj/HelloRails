@@ -1,9 +1,24 @@
+<% provide(:title, @category.name) %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
   <b>Name:</b>
   <%= @category.name %>
 </p>
+<table>
+  <tr>
+    <td>Question:</td>
+    <td>Hint:</td>
+  </tr>
+<% @questions.each do |question| %>
+      <tr>
+        <td><%= question.title %></td>
+        <td><%= question.hint %></td>
+      </tr>
+ <% end %>
+</table>
+<%= render @questions %>
 
 
 <%= link_to 'Edit', edit_category_path(@category) %> |

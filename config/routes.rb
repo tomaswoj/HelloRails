@@ -1,5 +1,17 @@
 HelloRails::Application.routes.draw do
 
+  resources :book_orders
+
+
+  resources :books
+
+
+  resources :zadania
+
+
+  resources :zajecia
+
+
   #get "static_pages_two/contact"
 
   get "users/new"
@@ -13,6 +25,7 @@ HelloRails::Application.routes.draw do
 
   resources :questions
   resources :categories
+  resources :testruns
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Zajecium:</b>
+  <%= @zadanium.zajecium_id %>
+</p>
+
+<p>
+  <b>Tytul:</b>
+  <%= @zadanium.tytul %>
+</p>
+
+<p>
+  <b>Opis:</b>
+  <%= @zadanium.opis %>
+</p>
+
+
+<%= link_to 'Edit', edit_zadanium_path(@zadanium) %> |
+<%= link_to 'Back', zadania_path %>

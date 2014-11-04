@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Temat:</b>
+  <%= @zajecium.temat %>
+</p>
+
+<p>
+  <b>Opis:</b>
+  <%= @zajecium.opis %>
+</p>
+
+<table>
+  <tr>
+    <td>Zadanie:</td>
+    <td>Opis:</td>
+  </tr>
+  <% @zadania.each do |zadanie| %>
+      <tr>
+        <td><%= zadanie.tytul %></td>
+        <td><%= zadanie.opis %></td>
+      </tr>
+  <% end %>
+</table>
+
+
+
+<%= link_to 'Edit', edit_zajecium_path(@zajecium) %> |
+<%= link_to 'Back', zajecia_path %>

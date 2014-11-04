@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  zajecium_id: 1
+  tytul: MyString
+  opis: MyString
+
+two:
+  zajecium_id: 1
+  tytul: MyString
+  opis: MyString

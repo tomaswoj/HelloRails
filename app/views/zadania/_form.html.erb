@@ -1,0 +1,29 @@
+<%= form_for(@zadanium) do |f| %>
+  <% if @zadanium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@zadanium.errors.count, "error") %> prohibited this zadanium from being saved:</h2>
+
+      <ul>
+      <% @zadanium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :zajecium_id %><br />
+    <%= f.number_field :zajecium_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tytul %><br />
+    <%= f.text_field :tytul %>
+  </div>
+  <div class="field">
+    <%= f.label :opis %><br />
+    <%= f.text_field :opis %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

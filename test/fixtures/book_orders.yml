@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  book_id: 1
+  customer: MyString
+  ship_to: MyString
+
+two:
+  book_id: 1
+  customer: MyString
+  ship_to: MyString

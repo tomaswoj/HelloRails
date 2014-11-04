@@ -1,0 +1,25 @@
+<%= form_for(@zajecium) do |f| %>
+  <% if @zajecium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@zajecium.errors.count, "error") %> prohibited this zajecium from being saved:</h2>
+
+      <ul>
+      <% @zajecium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :temat %><br />
+    <%= f.text_field :temat %>
+  </div>
+  <div class="field">
+    <%= f.label :opis %><br />
+    <%= f.text_field :opis %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

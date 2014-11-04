@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Book:</b>
+  <%= @book_order.book_id %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @book_order.customer %>
+</p>
+
+<p>
+  <b>Ship to:</b>
+  <%= @book_order.ship_to %>
+</p>
+
+
+<%= link_to 'Edit', edit_book_order_path(@book_order) %> |
+<%= link_to 'Back', book_orders_path %>

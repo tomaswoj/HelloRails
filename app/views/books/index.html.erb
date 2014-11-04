@@ -1,0 +1,35 @@
+<% provide(:shopname,"Tomek's Bookshop") %>
+<h1>Listing books</h1>
+
+<table border="1">
+  <tr>
+    <th>Title</th>
+    <th>Abstract</th>
+    <th>Added to shop <%= yield(:shopname) %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @books.each do |book| %>
+  <tr>
+    <td><%= book.title %></td>
+    <td><%= book.abstract %></td>
+    <td><%= book.created_at %></td>
+    <td><%= book.rating %></td>
+    <td><%= link_to 'Show', book %></td>
+    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<h>Search:</h>
+<%= form_for Book.new, :url => "search" do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+<%- end %>
+
+<br />
+
+<%= link_to 'New Book', new_book_path %>

@@ -1,0 +1,27 @@
+<h1>Listing book_orders</h1>
+
+<table>
+  <tr>
+    <th>Book</th>
+    <th>Customer</th>
+    <th>Ship to</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @book_orders.each do |book_order| %>
+  <tr>
+    <td><%= book_order.book_id %></td>
+    <td><%= book_order.customer %></td>
+    <td><%= book_order.ship_to %></td>
+    <td><%= link_to 'Show', book_order %></td>
+    <td><%= link_to 'Edit', edit_book_order_path(book_order) %></td>
+    <td><%= link_to 'Destroy', book_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Book order', new_book_order_path %>

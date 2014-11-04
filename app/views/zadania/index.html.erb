@@ -1,0 +1,27 @@
+<h1>Listing zadania</h1>
+
+<table>
+  <tr>
+    <th>Zajecium</th>
+    <th>Tytul</th>
+    <th>Opis</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @zadania.each do |zadanium| %>
+  <tr>
+    <td><%= zadanium.zajecium_id %></td>
+    <td><%= zadanium.tytul %></td>
+    <td><%= zadanium.opis %></td>
+    <td><%= link_to 'Show', zadanium %></td>
+    <td><%= link_to 'Edit', edit_zadanium_path(zadanium) %></td>
+    <td><%= link_to 'Destroy', zadanium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Zadanium', new_zadanium_path %>

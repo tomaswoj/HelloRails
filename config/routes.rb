@@ -1,5 +1,11 @@
 HelloRails::Application.routes.draw do
 
+  resources :cars
+
+
+  resources :parkings
+
+
   resources :book_orders
 
 
@@ -22,6 +28,7 @@ HelloRails::Application.routes.draw do
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages_two#contact'
   match '/signup', to: 'users#new'
+  match '/search', to: 'books#search'
 
   resources :questions
   resources :categories

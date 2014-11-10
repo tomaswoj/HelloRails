@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Parking:</b>
+  <%= @car.parking_id %>
+</p>
+
+<p>
+  <b>Registration:</b>
+  <%= @car.registration %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @car.owner %>
+</p>
+
+<p>
+  <b>Abonament card id:</b>
+  <%= @car.abonament_card %>
+</p>
+
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>

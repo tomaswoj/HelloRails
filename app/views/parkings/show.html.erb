@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Adres:</b>
+  <%= @parking.adres %>
+</p>
+
+<p>
+  <b>Pojemnosc:</b>
+  <%= @parking.pojemnosc %>
+</p>
+
+<% if @cars.size>0 %>
+<table border="1">
+  <tr>
+    <td>Rejestracja:</td>
+    <td>Wlasciciel:</td>
+  </tr>
+  <% @cars.each do |car| %>
+      <tr>
+        <td><%= car.registration %></td>
+        <td><%= car.owner %></td>
+      </tr>
+  <% end %>
+</table>
+<% end %>
+
+<%= link_to 'Edit', edit_parking_path(@parking) %> |
+<%= link_to 'Back', parkings_path %>

@@ -6,6 +6,8 @@
     <th>Title</th>
     <th>Abstract</th>
     <th>Added to shop <%= yield(:shopname) %></th>
+    <th>Rating</th>
+    <th>ISBN</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,6 +19,7 @@
     <td><%= book.abstract %></td>
     <td><%= book.created_at %></td>
     <td><%= book.rating %></td>
+    <td><%= book.isbn %></td>
     <td><%= link_to 'Show', book %></td>
     <td><%= link_to 'Edit', edit_book_path(book) %></td>
     <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,7 +30,8 @@
 <h>Search:</h>
 <%= form_for Book.new, :url => "search" do |f| %>
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= text_field_tag :title, params[:title] %>
+    <%= f.submit "Search" %>
 <%- end %>
 
 <br />

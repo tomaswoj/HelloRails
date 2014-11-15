@@ -3,5 +3,8 @@
 <br>
 <%-@books.each do |book| %>
     Name: <%=book.title %>
+    <%= link_to "Show", book %>
     <br>
 <%- end %>
+
+<%= render 'layouts/footnote' %>

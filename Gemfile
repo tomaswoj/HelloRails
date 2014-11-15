@@ -15,7 +15,7 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
-#gem 'bootstrap-sass', '2.0.0'
+gem 'bootstrap-sass', '2.0.0'
 
 # Gems used only for assets and not required
 # in production environments by default.

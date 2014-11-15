@@ -1,23 +1,12 @@
 HelloRails::Application.routes.draw do
 
   resources :cars
-
-
   resources :parkings
-
-
   resources :book_orders
-
-
   resources :books
-
-
   resources :zadania
-
-
   resources :zajecia
-
-
+  resources :car_infos, only: [:show, :index]
   #get "static_pages_two/contact"
 
   get "users/new"

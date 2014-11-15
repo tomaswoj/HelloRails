@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Parking.create(adres: 'Kapelanka', pojemnosc: 200)
+Parking.create(adres: 'Dietla', pojemnosc: 100)
+Parking.create(adres: 'Meiselsa', pojemnosc: 120)

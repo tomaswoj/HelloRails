@@ -1,6 +1,8 @@
 <% provide(:shopname,"Tomek's Bookshop") %>
 <h1>Listing books</h1>
 
+<%= render @books %>
+
 <table border="1">
   <tr>
     <th>Title</th>
@@ -37,3 +39,5 @@
 <br />
 
 <%= link_to 'New Book', new_book_path %>
+
+<%= render 'layouts/footnote' %>

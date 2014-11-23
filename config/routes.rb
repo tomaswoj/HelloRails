@@ -1,5 +1,11 @@
 HelloRails::Application.routes.draw do
 
+  #get "static_pages3/Overview"
+  get "static_pages3/History"
+
+  resources :customers
+
+
   resources :cars
   resources :parkings
   resources :book_orders
@@ -7,12 +13,14 @@ HelloRails::Application.routes.draw do
   resources :zadania
   resources :zajecia
   resources :car_infos, only: [:show, :index]
+  resources :book_infos, only: [:show, :index]
   #get "static_pages_two/contact"
 
   get "users/new"
 
   root to: 'static_pages#home'
 
+  match '/overview', to: 'static_pages3#Overview'
   match '/help', to: 'static_pages#help'
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages_two#contact'

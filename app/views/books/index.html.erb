@@ -33,7 +33,7 @@
 <%= form_for Book.new, :url => "search" do |f| %>
     <%= f.label :title %>
     <%= text_field_tag :title, params[:title] %>
-    <%= f.submit "Search" %>
+    <%= f.submit "Find a book" %>
 <%- end %>
 
 <br />
